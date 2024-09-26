@@ -98,11 +98,11 @@ class _AdMobExampleState extends State<AdMobExample> {
       _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
         onAdDismissedFullScreenContent: (InterstitialAd ad) {
           ad.dispose();
-          _loadInterstitialAd(); // Load a new ad once the current one is shown
+          _loadInterstitialAd();
         },
         onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
           ad.dispose();
-          _loadInterstitialAd(); // Load a new ad even if it fails
+          _loadInterstitialAd();
         },
       );
 
